@@ -41,16 +41,16 @@ Grab the latest release for your platform:
 
 ```bash
 # macOS (Apple Silicon)
-curl -fsSL https://github.com/ciderstack/Brew/releases/latest/download/brew-darwin-arm64.tar.gz | tar xz
+curl -fsSL https://github.com/ciderstack/Brew/releases/download/latest/brew-darwin-arm64.tar.gz | tar xz
 
 # macOS (Intel)
-curl -fsSL https://github.com/ciderstack/Brew/releases/latest/download/brew-darwin-x64.tar.gz | tar xz
+curl -fsSL https://github.com/ciderstack/Brew/releases/download/latest/brew-darwin-x64.tar.gz | tar xz
 
 # Linux (x86_64)
-curl -fsSL https://github.com/ciderstack/Brew/releases/latest/download/brew-linux-x64.tar.gz | tar xz
+curl -fsSL https://github.com/ciderstack/Brew/releases/download/latest/brew-linux-x64.tar.gz | tar xz
 
 # Linux (ARM64)
-curl -fsSL https://github.com/ciderstack/Brew/releases/latest/download/brew-linux-arm64.tar.gz | tar xz
+curl -fsSL https://github.com/ciderstack/Brew/releases/download/latest/brew-linux-arm64.tar.gz | tar xz
 ```
 
 ### Run
