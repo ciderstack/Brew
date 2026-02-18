@@ -29,7 +29,6 @@ Brew is the orchestration layer for [CiderStack](https://ciderstack.com) macOS i
 
 - **Ephemeral macOS VMs** — Clone a template, run your build, tear it down. Every job gets a clean environment.
 - **GitHub Actions integration** — Self-hosted macOS runners that auto-register, run one job, and disappear.
-- **Visual workflow editor** — Drag-and-drop DAG builder that compiles to YAML. Route builds to specific Apple Silicon chips.
 - **Fleet management** — Pair nodes, monitor health, manage snapshots, execute commands — all through one dashboard.
 
 Ships as a single compiled binary with a built-in web UI. No containers, no JVM, no external databases.
@@ -127,16 +126,6 @@ jobs:
       - run: xcodebuild -scheme MyApp -sdk iphoneos
 ```
 
-### Visual Workflow Builder
-
-Build automation pipelines with a drag-and-drop DAG editor at `/automations`. Workflows compile to YAML and support:
-
-- **Triggers** — Push, pull request, schedule (cron), or manual
-- **Hardware routing** — Pin jobs to M1, M2, M3, or M4 chips
-- **Conditional steps** — Branch on `success()` or `failure()` expressions
-- **Notifications** — Slack alerts with template variables
-- **Starter templates** — iOS PR checks, release builds, React Native, cross-platform, and more
-
 ### Fleet Management
 
 Full lifecycle control over your macOS VM fleet:
@@ -148,13 +137,12 @@ Full lifecycle control over your macOS VM fleet:
 | **VM operations** | Clone, start, stop, delete, snapshot, restore |
 | **Command execution** | Run arbitrary commands on VMs over SSH |
 | **Persistent pools** | Keep a set of VMs pre-cloned and ready, with TTL-based recycling |
-| **Script library** | 20+ built-in diagnostic scripts, custom script support, multi-VM execution |
 | **Prometheus metrics** | `/api/metrics` endpoint for Grafana dashboards |
 
 ### Alerts & Notifications
 
 - Health alerts when nodes go offline or resources run low
-- Slack integration for job status, failures, and custom workflow notifications
+- Slack integration for job status and failure notifications
 - In-dashboard alert feed with acknowledgment
 
 ## Configuration
@@ -195,7 +183,6 @@ data/
     identity.json          # Node ID + creation timestamp
     private.key            # P-256 ECDSA private key
   builds/                  # Local build artifacts
-  workflows/               # Automation YAML files
 ```
 
 ## Architecture
@@ -308,15 +295,6 @@ All endpoints are served at `http://localhost:8470`. Authenticated endpoints req
 | `POST` | `/api/runner-pools` | Create ephemeral runner pool |
 | `PATCH` | `/api/runner-pools/:id` | Update pool (resize) |
 | `DELETE` | `/api/runner-pools/:id` | Delete pool |
-
-### Automations
-
-| Method | Path | Description |
-|---|---|---|
-| `GET` | `/api/automations` | List workflows |
-| `GET` | `/api/automations/templates` | Starter templates |
-| `PUT` | `/api/automations/:name` | Create/update workflow |
-| `POST` | `/api/automations/:name/run` | Manual trigger |
 
 ### Webhooks
 
