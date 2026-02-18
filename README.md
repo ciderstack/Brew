@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/ciderstack/Brew/assets/logo-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://github.com/ciderstack/Brew/assets/logo-light.svg">
-    <img alt="Brew" src="https://github.com/ciderstack/Brew/assets/logo-dark.svg" width="200">
+    <img alt="Brew" src="https://ciderstack.sfo3.cdn.digitaloceanspaces.com/Images/ciderstack-logo-512.png" width="200">
   </picture>
 </p>
 
