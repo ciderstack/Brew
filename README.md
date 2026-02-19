@@ -33,24 +33,6 @@ Ships as a single compiled binary with a built-in web UI. No containers, no JVM,
 
 ## Quickstart
 
-### Download
-
-Grab the latest release for your platform:
-
-```bash
-# macOS (Apple Silicon)
-curl -fsSL https://github.com/ciderstack/Brew/releases/download/latest/brew-v0.1.0-darwin-arm64.tar.gz | tar xz
-
-# macOS (Intel)
-curl -fsSL https://github.com/ciderstack/Brew/releases/download/latest/brew-v0.1.0-darwin-x64.tar.gz | tar xz
-
-# Linux (x86_64)
-curl -fsSL https://github.com/ciderstack/Brew/releases/download/latest/brew-v0.1.0-linux-arm64.tar.gz | tar xz
-
-# Linux (ARM64)
-curl -fsSL https://github.com/ciderstack/Brew/releases/download/latest/brew-v0.1.0-linux-x64.tar.gz| tar xz
-```
-
 ### Run
 
 ```bash
