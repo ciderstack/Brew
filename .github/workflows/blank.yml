@@ -1,0 +1,9 @@
+  name: Test Queue                                                                                                          
+  on: push                                                                      
+                                                 
+  jobs:                                          
+    test:
+      runs-on: [self-hosted, macOS, ARM64, ciderstack-hosted]
+      steps:
+        - run: echo "Hello from CiderStack!"
+        - run: sleep 45
