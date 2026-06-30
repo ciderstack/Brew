@@ -1,3 +1,4 @@
+** THIS PROJECT IS NO LONGER IN DEVELOPMENT **
 <p align="center">
   <picture>
     <img alt="Harvest" src="https://f004.backblazeb2.com/file/ciderstack-mdm/ciderstack-logo.svg" width="200">
